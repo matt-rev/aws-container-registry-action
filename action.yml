@@ -20,7 +20,7 @@ runs:
 
     # Initial AWS client configuration
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v4
       id: aws-configuration
       with:
         aws-access-key-id: ${{ inputs.awsAccessKeyId }}
@@ -30,4 +30,4 @@ runs:
     # Process secured Docker login
     - name: Login to Elastic Container Registry
       id: aws-login
-      uses: aws-actions/amazon-ecr-login@v1
+      uses: aws-actions/amazon-ecr-login@v2
